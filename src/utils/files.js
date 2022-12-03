@@ -1,7 +1,7 @@
 import url from 'url';
 import path from 'path';
 
-const getCurrentDirNameByURL = (URLString) => {
+const getCurrDirPathByURL = (URLString) => {
   try {
     const fullPath = url.fileURLToPath(URLString);
     const dirName = path.dirname(fullPath);
@@ -12,4 +12,4 @@ const getCurrentDirNameByURL = (URLString) => {
   }
 };
 
-export {getCurrentDirNameByURL };
+export {getCurrDirPathByURL};

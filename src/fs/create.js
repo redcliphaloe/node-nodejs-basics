@@ -1,12 +1,12 @@
 import path from 'path';
 import fsp from 'fs/promises';
-import {getCurrentDirNameByURL} from '../utils/files.js';
+import {getCurrDirPathByURL} from '../utils/files.js';
 
 const create = async () => {
-  const dirName = getCurrentDirNameByURL(import.meta.url);
+  const currDirPath = getCurrDirPathByURL(import.meta.url);
   const subDirName = 'files';
   const fileName = 'fresh.txt';
-  const filePath = path.join(dirName, subDirName, fileName);
+  const filePath = path.join(currDirPath, subDirName, fileName);
   const fileText = 'I am fresh and young';
   const errorText = 'FS operation failed';
 
